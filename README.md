@@ -3,7 +3,7 @@
 ### H3
 
 Esto es un texto descriptivo
-**texto en negrita**
+**texto en negrita** **texto personalizad**
  
  >Esto es un bloque de comentario
 
