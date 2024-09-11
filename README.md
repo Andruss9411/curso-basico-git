@@ -4,6 +4,8 @@
 #### H3 - 2 
 
 Esto es un texto descriptivo
+
+Este es otro cambio parcial
 **texto en negrita** **texto personalizad**
  
  >Esto es un bloque de comentario
