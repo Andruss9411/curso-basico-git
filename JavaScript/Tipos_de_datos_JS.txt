@@ -1,0 +1,42 @@
+let -> se usa para declarar variables segun el scope, puede reasignarse.
+var -> se usa para declarar variables de estado global , puede reasignarse incluso cambiar de tipo en el futuro
+const -> se declara y se inicializa una sola vez, su valor no puede ser reasignado en el futuro
+
+
+Dato primitivo -> Son datos por defecto y que no estan almacentados en memoria.
+
+Boolean 
+Null 
+Undefined  
+
+let nombre; // Declararla
+let apellido = "Garces" //Declararla e inicializarla.
+
+//Tipos de datos
+
+//Tipo de dato Number o numéico, no hay un tipo específico para los números enteros o flotantes (decimales)
+let number = 54;
+let edad = 35;
+let peso = 45.678;
+
+
+//Tipo de dato string.
+let nombres = "Daniel Garces";
+
+//Tipo de datos booleano -> solo me retornan valores verdadero o falso, true or false
+let y = false;
+let x = true;
+
+//Tipo de dato null
+
+let direccion = null;
+
+//Tipo de dato undefined
+
+let telefono = undefined; //Es toda aquella que no se le haya asignado un valor y por defecto tiene el valor de undefined.
+let telefono2; //Es toda aquella que no se le haya asignado un valor y por defecto tiene el valor de undefined.
+
+
+//Tipo de dato symbol
+
+const mySymbol = Symbol();

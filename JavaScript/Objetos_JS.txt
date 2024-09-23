@@ -1,0 +1,22 @@
+let persona = {
+    "nombre" : "Daniel",
+    "apellido" : "Garcs",
+    "edad": 35,
+    "casado" : false,
+    "saludar" : function(){
+        console.log("Emitiendo un saludo")
+    },
+    "direccion": {
+        "nombre" : "casa",
+        "ruta" : "mz 1 cs 1",
+        "referencia" : "frente a la avenida principal",
+        "ruta:direccion" : "esta es una prueba de ruta y direccion"
+    }
+}
+
+// console.log("MOSTRANDO MI PRIMER OBJETO", persona.nombre);
+console.log("MOSTRANDO MI PRIMER OBJETO", persona.direccion);
+console.log("MOSTRANDO MI PRIMER OBJETO", persona.direccion.nombre);
+console.log("MOSTRANDO MI PRIMER OBJETO", persona.direccion.ruta);
+console.log("MOSTRANDO MI PRIMER OBJETO", persona.direccion.referencia);
+console.log("MOSTRANDO MI PRIMER OBJETO", persona.direccion["ruta:direccion"]);
