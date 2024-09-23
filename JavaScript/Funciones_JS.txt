@@ -1,0 +1,32 @@
+// palabra reservada + nombre de la funcion + lista de argumentos + declaraciones de javascript
+
+//Funcion declarativa
+function saludar(){
+console.log("Hola mundo");
+}
+
+saludar();
+
+
+//Funcion declarativa
+function saludo(nombre){
+    console.log("Hola "+nombre);
+}
+saludo("Daniel");
+
+
+//Funcion anÃ³nima.
+
+const saludar = function(nombres){
+    console.log("Hola mundo "+nombres);
+}
+
+saludar("JUan");
+
+//Funciones de flecha o arrow functions
+
+const suma = (a,b) => {
+    console.log(a+b);
+}
+
+suma(10,15);
