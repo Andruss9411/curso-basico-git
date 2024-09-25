@@ -15,7 +15,7 @@ function saludo(nombre){
 saludo("Daniel");
 
 
-//Funcion anÃ³nima.
+//Funcion anónima.
 
 const saludar = function(nombres){
     console.log("Hola mundo "+nombres);
