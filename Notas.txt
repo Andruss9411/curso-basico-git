@@ -1,1 +1,30 @@
-Pruebas
+-- Ver configuraciones de GIT
+
+git config --global list
+
+-- Agregar configuración
+
+git config --global user.name nombre
+git config --global user.email correo
+
+--Eliminar configuración
+
+git config --global --unser user.name
+git config --global --unser user.email
+
+También debemos ir a las credenciales de Windows y elimar GIT.
+
+
+------ Comandos para realizar subidas.
+
+git init
+git remote add origin ENLACE_URL
+
+git add .
+git commit -m "Comentario"
+git push origin NOMBRE_RAMA
+
+
+-- Actualizar repositorio local
+
+git pull origin NOMBRE_RAMA
