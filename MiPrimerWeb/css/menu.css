@@ -1,0 +1,52 @@
+footer {
+    background-color: black;
+    bottom: 0;
+    color: white;     
+    height: 40px;
+    left: 0;
+    position: relative;
+    width: 100%;    
+}
+
+footer p {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   padding-top: 1%;
+   text-align: center;
+}
+
+nav {
+    background-color: black;
+    color: white;
+}
+
+.logo {
+    flex-grow: 3;
+}
+
+.logo img {    
+    padding: 2% 3% 2% 6%;
+    width: 10%;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu li { 
+    width: 10%;
+    list-style: none;
+}
+
+.menu a {
+     color: white;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: white;
+    border: 5px, white solid;
+    border-radius: 3px;
+    color: black;
+}

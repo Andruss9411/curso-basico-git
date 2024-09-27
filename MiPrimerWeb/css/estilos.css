@@ -1,0 +1,45 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.character {
+    border: 1px black solid;
+    border-radius: 5%;
+    margin: 3%;
+    width: 25%;
+    text-align: center;  
+}
+
+.character img {
+    border-radius: 3%;
+    width:80%;    
+}
+
+.container {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+}
+
+h1, 
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 1%;
+    text-align: center;
+}
+
+h2 {
+    margin: 2%;
+    font-weight: 600;
+}
+
+.info-character {
+    padding: 3%;
+    text-align: justify;
+}
+
+.section-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
