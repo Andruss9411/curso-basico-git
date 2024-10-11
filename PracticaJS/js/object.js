@@ -1,7 +1,4 @@
-//Obteniendo el dato de la clave itemList que se encuentra almacenado en el Local Storage.
 var items = localStorage.getItem('itemList');
-//Condicional Ternario
-//Se convierte la información de la clave en un arreglo.
 items = items ? JSON.parse(items) :  [] ;
 showItems();
 
@@ -26,13 +23,6 @@ function showItems(){
     document.getElementById("product-value").value = '';
 
     let html = "";
-    /*for(let i = 0; i < items.length; i++){
-        html += `<div class='col-3 m-1'>${items[i].nombre}</div>`; 
-        html += `<div class='col-3 m-1'>${items[i].descripcion}</div>`; 
-        html += `<div class='col-3 m-1'>${items[i].precio}</div>`; 
-        html += `<div class= 'col-1 m-1'> <input type='button' class='btn btn-danger' onclick='deleteItem(${i})' value='X'> </div>`;
-    }*/
-
     items.forEach((item,i) => {
         html += `<div class='col-3 m-1'>${item.nombre}</div>`; 
         html += `<div class='col-3 m-1'>${item.descripcion}</div>`; 
