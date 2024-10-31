@@ -1,0 +1,25 @@
+{
+  "name": "1.-nodejs",
+  "version": "1.0.0",
+  "description": "CONCEPTOS BASICOS DE NODE",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node 0.index.js",
+    "dev": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andruss9411/curso-basico-git.git"
+  },
+  "keywords": [
+    "node",
+    "js"
+  ],
+  "author": "Felipe Salinas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Andruss9411/curso-basico-git/issues"
+  },
+  "homepage": "https://github.com/Andruss9411/curso-basico-git#readme"
+}
