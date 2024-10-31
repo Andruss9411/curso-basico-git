@@ -20,6 +20,6 @@ console.log(estudiante.nombre);
 console.log(estudiante.saludo());
 
 const libro = {
-    titulo = "El principito",
+    titulo: "El principito",
     año: 1943
 }
