@@ -3,7 +3,9 @@
 */
 
 import {platform, release, arch, cpus, freemem, totalmem} from "node:os";
-const {hash} = await import("node:crypto");
+const {createHash} = await import("node:crypto");
+
+const hash = createHash("sha256");
 
 console.log("Sistema operativo: ",platform());
 console.log("Release: ",release());

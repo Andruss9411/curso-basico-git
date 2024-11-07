@@ -24,6 +24,10 @@
   },
   "homepage": "https://github.com/Andruss9411/curso-basico-git#readme",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "nodemon": "^3.1.7"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
   }
 }
