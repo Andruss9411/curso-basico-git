@@ -1,24 +1,24 @@
-import http, { createServer } from "node:http";
+import http from "node:http";
 
-//API
-//Crear un servidor
+//api
 var servidor = "";
-
-function main(){
-  awaitServer();
+//crear un servidor
+function main() {
+  crearServidor();
+  escucharServidor();
 }
 
-function crteServer(){
-    servidor = http.createServer((req, res) => {
-        res.writeHead(200, {"content-type": "text/plain"});
-        res.end("Hola mundo");
-    });
+function crearServidor() {
+  servidor = http.createServer((req, res) => {
+    res.writeHead(200, { "Content-Type": "text/plain" });
+    res.end("Hola mundo");
+  });
 }
 
-function awaitServer() {
-    servidor.listen(3000, () => {
-        console.log("Servidor escuchando en el puerto 3000");
-    });
+//escuchar el servidor
+function escucharServidor() {
+  servidor.listen(3000, () => {
+    console.log("Servidor escuchando en el puerto 3000");
+  });
 }
-//Escuchar un servidor
 main();
