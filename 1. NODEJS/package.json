@@ -25,6 +25,7 @@
   "homepage": "https://github.com/Andruss9411/curso-basico-git#readme",
   "dependencies": {
     "dotenv": "^16.4.5",
+    "mongodb": "^6.10.0",
     "nodemon": "^3.1.7"
   },
   "devDependencies": {
