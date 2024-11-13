@@ -1,5 +1,5 @@
 import http from "node:http";
-import { MongoClient } from "mongodb";
+import { MongoClient, ObjectId } from "mongodb";
 import url from "node:url";
 
 const uriDB = "mongodb+srv://andruss9411:Ack3rman9411*@cluster0.oabbw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
@@ -48,16 +48,50 @@ async function main() {
                         });                         
                     })
                     break;
-                case "PUT":
-                    updateUser();
-                    break;
-                case "DELETE":
-                    deleteUser();
-                    break;
                 default:
                     break;
             }
         }
+        else if(urlParse.pathname.includes("/user")){
+            switch(req.method){
+                case "PUT":
+                    const id = urlParse.pathname.split("/")[2];
+                    let body = "";
+                    req.on("data", (data => {
+                        body += data.toString();
+                    }));
+                    req.on("end", () => {
+                        body = JSON.parse(body);
+                        updateUser(db,id, body).then((resp) => {
+                            res.writeHead(201, { "Content-Type": "application/json" });
+                            res.end(JSON.stringify(resp)); 
+                        });                       
+                    })
+                break;
+                case "DELETE":
+                    req.on("end", () => {
+                        deleteUser(db,id).then((resp) => {
+                            res.writeHead(201, { "Content-Type": "application/json" });
+                            res.end(JSON.stringify(resp)); 
+                        });                       
+                    })
+                break;            
+            }
+        }
+       /* else if(req.method ="PUT" && urlParse.pathname.includes("/user")){
+            const id = urlParse.pathname.split("/")[2];
+            let body = "";
+            req.on("data", (data => {
+                body += data.toString();
+            }));
+            req.on("end", () => {
+                body = JSON.parse(body);
+                updateUser(db,id, body).then((resp) => {
+                    res.writeHead(201, { "Content-Type": "application/json" });
+                    res.end(JSON.stringify(resp)); 
+                });             
+            })
+        }*/
     })
 }; 
 
@@ -70,14 +104,21 @@ async function main() {
   async function createUser(db, body){
     const collection = db.collection("user");
     const query = await collection.insertOne(body);
-    console.log(query);
     return query;
   }  
 
-  async function updateUser(){
+  async function updateUser(db, id, body){
+    const collection = db.collection("user");
+    const query = await collection.updateOne(
+        {_id: new ObjectId(id)},
+        { $set: body});
+    return query;
   }  
 
-  async function deleteUser(){
+  async function deleteUser(db,id){
+    const collection = db.collection("user");
+    const query = await collection.deleteOne({_id: new ObjectId(id)});
+    return query;
   }  
 
 
