@@ -4,12 +4,12 @@ import userRoutes from "./routes/v1/userRoutes.js";
 //crear servidor
 const app = express();
 dotenv.config();
+app.use(json());
 
 //routing
 app.use("/api/v1/user", userRoutes);
 
 //midlewares
-app.use(json());
 app.use((req, res) => {
   res.status(404).send("Not found");
 });
