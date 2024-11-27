@@ -6,6 +6,8 @@ const router = new Router();
 router
   .get("/", userController.getUser)
   .post("/", userController.createUser)
+  .post("/login", userController.loginUser)
+  //.post("/logout", userController.logouteUser)
   .put("/:id", userController.updateUser)
   .delete("/:id", userController.deleteUser);
 

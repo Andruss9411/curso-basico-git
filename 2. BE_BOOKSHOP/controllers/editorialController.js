@@ -16,7 +16,7 @@ const getEditorial = async (req, res) => {
   };
   
   const deleteEditorial = async (req, res) => {
-    const data = await editorialService.deleteUser(req.params.id);
+    const data = await editorialService.deleteEditorial(req.params.id);
     res.status(200).json(data);
   };  
  
