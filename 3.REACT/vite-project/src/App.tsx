@@ -1,33 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Paragraph from "./components/1.classComponents/Paragraph.tsx";
+import Title from "./components/2.functionComponents/Title.jsx";
+import Table from "./components/2.functionComponents/Table.jsx";
+import { BrowserRouter, Routes, Route } from 'react-router';
+import Menu from "./components/3.navComponents/Menu.jsx";
+import Button from "./components/4.MUI/Boton.jsx"
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      
+      <BrowserRouter>
+        <h1> Ejemplos de React</h1>
+        <Menu/>
+        <Routes>
+          <Route path="/class-component" element={
+            <>
+              <Paragraph text="Esto es un parráfo" />
+              <Paragraph text="Esto es otro parráfo" />
+              <Paragraph text="Esto es el último parráfo" />
+            </>            
+          }/>
+          <Route path="/function-component" element={
+            <>
+              <Title/>
+              <Table/>
+              </>            
+          }/>
+          <Route path="/mui-component" element={
+            <>
+              <Button/>
+              </>            
+          }/>     
+            
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
