@@ -14,6 +14,27 @@ export default function Menu(){
                 <li>
                     <Link to="/mui-component">Material UI</Link>
                 </li>
+                <li>
+                    <Link to="/props">Props</Link>
+                </li>
+                <li>
+                    <Link to="/children">Children</Link>
+                </li>
+                <li>
+                    <Link to="/lista">Lista</Link>
+                </li>
+                <li>
+                    <Link to="/renderizado">Renderizado Condicional</Link>
+                </li>
+                <li>
+                    <Link to="/evento">Eventos</Link>
+                </li>
+                <li>
+                    <Link to="/estados">Estados</Link>
+                </li>
+                <li>
+                    <Link to="/hooks">Hooks</Link>
+                </li>
             </ul>
         </nav>
     </div>
